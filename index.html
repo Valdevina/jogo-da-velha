@@ -1,47 +1,25 @@
 !<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo da Velha</title>
-    <style>
-        /* Estilos para o tabuleiro e os botões */
-        .tabuleiro {
-            display: grid;
-            grid-template-columns: repeat(3, 100px);
-            grid-template-rows: repeat(3, 100px);
-            gap: 5px;
-            margin-bottom: 20px;
-        }
+<html lang="pt-BR"> <!--tag de idioma-->
+<head> <!--cabeçalho de configuração pra ferramenta de busca-->
+    <meta charset="UTF-8"><!--Padrão para reconhecer caractere especiais-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--compatibilidade de dispositivos-->
+    <title>Jogo da Velha</title><!--adiciona titulo na aba do navegador-->
+<link rel="stylesheet" href="style.css"><!--Associar o arquivo no css ao html-->
+</head> <!--final da head-->
+<body><!--corpo da página-->
+    <header><!--cabeçalho da página onde fica o menu e coisas semelhantes-->
+        <h1>Jogo da Velha</h1><!--titulo principal do texto-->
 
-        .tabuleiro button {
-            width: 100px;
-            height: 100px;
-            font-size: 2rem;
-            cursor: pointer;
-        }
-
-        .placar {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-        #reiniciar {
-            font-size: 1.2rem;
-            padding: 10px;
-        }
-    </style>
-</head>
-<body>
-    <h1>Jogo da Velha</h1>
-
-    <div class="placar">
-        <p>Jogador 1 (X): <span id="placar-jogador1">0</span></p>
-        <p>Jogador 2 (O): <span id="placar-jogador2">0</span></p>
-    </div>
-
-    <div class="tabuleiro">
+        <div class="placar"> <!--criar divisões  na página e pode conter atributos ex: classe, id, style, etc-->
+            <p>Jogador 1 (X): <span id="placar-jogador1">0</span></p><!--paragrafo do texto-->
+            <p>Jogador 2 (O): <span id="placar-jogador2">0</span></p><!--span é uma linha de texto qualquer sem quebra-->
+        </div> <!--fechamento da div-->
+    
+    </header><!--fechamento do cabeçalho-->
+   
+    <main class="tabuleiro"> <!--main onde fica o conteúdo principal da sua página-->
         <!-- Botões para o tabuleiro -->
-        <button data-pos="0"></button>
+        <button data-pos="0"></button><!--botão com atributo de posição-->
         <button data-pos="1"></button>
         <button data-pos="2"></button>
         <button data-pos="3"></button>
@@ -50,10 +28,12 @@
         <button data-pos="6"></button>
         <button data-pos="7"></button>
         <button data-pos="8"></button>
-    </div>
-
+    </main>
+<footer> <!--rodapé da página onde geralmente colocam outras informações-->
     <button id="reiniciar">Reiniciar Jogo</button>
 
-    <script src="script.js"></script>
-</body>
-</html>
+</footer> <!--fechamento da footer-->
+    
+    <script src="script.js"></script> <!--associa e executa o js ao html-->
+</body><!--fechamento do corpo da página-->
+</html><!--fechamento-->
